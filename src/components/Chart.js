@@ -39,6 +39,9 @@ const options = {
         display: false,
         drawBorder: false,
       },
+      ticks: {
+        display: false,
+      },
     },
   },
   plugins: {

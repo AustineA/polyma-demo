@@ -1,25 +1,40 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import styled from "styled-components";
+import StatsCard from "../components/StatsCard";
 
 const Home: React.FC = () => {
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
+    <HomePage>
+      <IonHeader className="ion-no-border">
+        <IonToolbar></IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+      <IonContent className="ion-padding">
+        <StatsCard />
       </IonContent>
-    </IonPage>
+    </HomePage>
   );
 };
 
 export default Home;
+
+const HomePage = styled(IonPage)`
+  background: var(--ion-color-bg);
+
+  ion-toolbar {
+    --background: transparent;
+    padding-left: 18px;
+    margin-top: 10px;
+  }
+
+  ion-content {
+    --background: transparent;
+    --background-color: transparent;
+    background: transparent !important;
+  }
+`;

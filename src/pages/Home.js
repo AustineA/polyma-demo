@@ -6,16 +6,16 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import styled from "styled-components";
-import StatsCard from "../components/StatsCard";
+import Stats from "../components/Stats";
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <HomePage>
       <IonHeader className="ion-no-border">
         <IonToolbar></IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <StatsCard />
+        <Stats />
       </IonContent>
     </HomePage>
   );
@@ -36,5 +36,8 @@ const HomePage = styled(IonPage)`
     --background: transparent;
     --background-color: transparent;
     background: transparent !important;
+  }
+
+  .stats {
   }
 `;

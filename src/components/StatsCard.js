@@ -14,7 +14,7 @@ export default StatsCard;
 
 const Card = styled.div`
   max-width: 170px;
-  min-height: 175px;
+  min-height: 165px;
   background: #1d1f21;
   border-radius: 30px;
   color: #fff;

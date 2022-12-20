@@ -7,6 +7,7 @@ import {
 } from "@ionic/react";
 import styled from "styled-components";
 import Stats from "../components/Stats";
+import Chart from "../components/Chart";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <IonToolbar></IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding" color="bg">
+        <Chart />
         <IonLabel>Sales Revenue</IonLabel>
         <Stats />
       </IonContent>

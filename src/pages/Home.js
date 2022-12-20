@@ -1,8 +1,8 @@
 import {
   IonContent,
   IonHeader,
+  IonLabel,
   IonPage,
-  IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import styled from "styled-components";
@@ -14,7 +14,8 @@ const Home = () => {
       <IonHeader className="ion-no-border">
         <IonToolbar></IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding">
+      <IonContent className="ion-padding" color="bg">
+        <IonLabel>Sales Revenue</IonLabel>
         <Stats />
       </IonContent>
     </HomePage>

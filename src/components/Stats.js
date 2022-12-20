@@ -14,6 +14,7 @@ const Stats = () => {
 export default Stats;
 
 const StatsContainer = styled.div`
+  margin-top: 8%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   justify-content: space-between;

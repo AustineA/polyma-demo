@@ -1,0 +1,9 @@
+ion-action-sheet.polyma-action-select {
+  --background: #1e1e1e;
+  --backdrop-opacity: 0.7;
+  --button-background-selected: #1e1e1e;
+  --button-color: #fff;
+  --color: #fff;
+  /* role: "destructive" button iOS styling override */
+  --ion-color-danger: #000000;
+}

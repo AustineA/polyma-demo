@@ -4,16 +4,25 @@ import {
   IonLabel,
   IonPage,
   IonToolbar,
+  IonButtons,
+  IonButton,
 } from "@ionic/react";
 import styled from "styled-components";
 import Stats from "../components/Stats";
 import Chart from "../components/Chart";
+import Flags from "../components/Flags";
 
 const Home = () => {
   return (
     <HomePage>
       <IonHeader className="ion-no-border">
-        <IonToolbar></IonToolbar>
+        <IonToolbar>
+          <IonButtons slot="end">
+            <IonButton>
+              <Flags />
+            </IonButton>
+          </IonButtons>
+        </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding" color="bg">
         <Chart />

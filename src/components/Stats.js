@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import StatsCard from "./StatsCard";
+import { strings } from "../services/locale";
 
 const Stats = () => {
   return (
     <StatsContainer>
       {dash.map(({ icon, figure, title }, i) => (
-        <StatsCard icon={icon} figure={figure} title={title} key={i} />
+        <StatsCard icon={icon} figure={figure} title={strings[title]} key={i} />
       ))}
     </StatsContainer>
   );
@@ -25,21 +26,21 @@ const dash = [
   {
     icon: "/assets/icon/PieChart.svg",
     figure: "560k",
-    title: "Sales",
+    title: "sales",
   },
   {
     icon: "/assets/icon/Person.svg",
     figure: "100k",
-    title: "Customers",
+    title: "customers",
   },
   {
     icon: "/assets/icon/Package.svg",
     figure: "2.6k",
-    title: "Products",
+    title: "products",
   },
   {
     icon: "/assets/icon/DollarSign.svg",
     figure: "$28,680",
-    title: "Revenue",
+    title: "revenue",
   },
 ];

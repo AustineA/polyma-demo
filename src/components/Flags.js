@@ -3,13 +3,21 @@ import { useIonActionSheet } from "@ionic/react";
 import styled from "styled-components";
 import "../theme/polyma.css";
 import { state } from "../services/store";
+import { useSnapshot } from "valtio";
 
 const Flags = () => {
   const [present] = useIonActionSheet();
   const [selected, setSelected] = useState(langs[0]);
+
+  const { locale, labels } = useSnapshot(state);
+
+  const i18n = (key) => {
+    return labels[locale][key];
+  };
+
   const handleClick = () => {
     present({
-      header: "Select A Language",
+      header: `${i18n("selectALanguage")}`,
       cssClass: "polyma-action-select",
       buttons: [
         ...langs.map((item) => ({

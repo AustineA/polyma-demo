@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import StatsCard from "./StatsCard";
-import { labels } from "../services/labels";
 import { state } from "../services/store";
 import { useSnapshot } from "valtio";
 
 const Stats = () => {
-  const { locale } = useSnapshot(state);
+  const { locale, labels } = useSnapshot(state);
 
-  const i18n = (word) => {
-    return labels[locale][word];
+  const i18n = (key) => {
+    return labels[locale][key];
   };
 
   return (

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useIonActionSheet } from "@ionic/react";
 import styled from "styled-components";
 import "../theme/polyma.css";
+import { state } from "../services/store";
 
 const Flags = () => {
   const [present] = useIonActionSheet();
@@ -26,6 +27,7 @@ const Flags = () => {
         const { data } = detail;
         if (!data) return;
         setSelected(data);
+        state.locale = data.locale;
       },
     });
     console.log("You clicked");
